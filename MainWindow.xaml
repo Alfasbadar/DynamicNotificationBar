@@ -1,0 +1,30 @@
+﻿<Window x:Class="DynamicNotificationBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DynamicNotificationBar"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <Border x:Name="notificationCard" Width="200" Height="100" Background="LightBlue"
+                CornerRadius="10" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Visibility="Collapsed">
+            <TextBlock Text="Hello, this is a notification!"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0" ScaleY="0"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+    </Grid>
+
+</Window>
